@@ -34,13 +34,33 @@
             */
             vertical-align: middle;
         }
-
-        .numero {
-            text-align: right;
+        .esquerda{
+            text-align: left;
+            vertical-align: top;
         }
-
-
-
+        .topo{
+            vertical-align: top; 
+        }
+        .direita{
+            text-align: right;
+            vertical-align: top;
+        }
+        .baixo{
+            text-align: middle;
+            vertical-align: bottom;
+        }
+        .padrao{
+            text-align: center;
+            vertical-align: middle;
+        }
+        .direita-baixo{
+            text-align: right;
+            vertical-align: bottom;
+        }
+        .linha-fina{
+            height: 50px;
+            width: 50px;
+        }
     </style>
 </head>
 <body>
@@ -53,24 +73,25 @@
                 Table Header = cabeçalho de tabela Data = dado da tabela Data = dado da tabela
     -->
     <table>
-        <tr> <!-- Primeira linha -->
-            <td>A1</td>
-            <td>B1</td>
-            <td>C1</td>
+        <tr class="linha-fina"> <!-- Primeira linha -->
+            <td class="esquerda">A1<br>(esquerda)
+            </td>
+            <td>B1<br>(padrão centro)</td>
+            <td class="direita">C1<br>(direita)</td>
         </tr> <!-- Segunda linha -->
         <tr class="linha">
-            <td>A2</td>
-            <td>B2</td>
-            <td class="numero">C2</td>
+            <td class="topo">A2<br>(topo)</td>
+            <td class="padrao">B2<br>(padrão)</td>
+            <td class="baixo">C2<br>(baixo)</td>
         </tr>
-        <tr> <!-- Terceira linha -->
-            <td>A3</td>
-            <td>B3</td>
-            <td class="numero">C3</td>
+        <tr><!-- Terceira linha -->
+            <td class="topo">A3<br>(topo)</td>
+            <td class="baixo">B3<br>(baixo)</td>
+            <td class="padrao">C3<br>(padrão)</td>
         </tr>
-        <tr> <!-- Quarta linha -->
+        <tr class="linha-fina"> <!-- Quarta linha -->
             <td>A4</td>
-            <td class="dado">B4</td>
+            <td class="direita-baixo">1000<br>(número à direita)</td>
             <td>C4</td>
         </tr>
 
